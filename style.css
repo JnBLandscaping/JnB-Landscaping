@@ -1,0 +1,283 @@
+/* =====================
+   Base Styles
+===================== */
+html, body {
+    height: 100%; /* ensures footer can stick at bottom */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* stack nav, header, main, footer */
+    background-color: white;
+    color: rgb(63, 63, 63);
+}
+
+/* =====================
+   Header
+===================== */
+header {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(65, 15, 164);
+    order: 0; /* default order */
+}
+
+.logo {
+    max-width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+.tagline {
+    font-style: italic;
+    margin-top: -5px;
+    color: rgb(65, 15, 164);
+}
+
+.hero {
+    display: flex;              /* use flexbox */
+    flex-direction: column;     /* stack h1 and p vertically */
+    justify-content: center;    /* vertical centering inside section */
+    align-items: center;        /* horizontal centering */
+    height: 75px;               /* adjust height as needed */
+    text-align: center;
+    font-size: large;
+}
+
+/* =====================
+   Navigation
+===================== */
+nav {
+    background-color: rgb(63, 63, 63);
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: rgb(122, 59, 246);
+}
+
+/* =====================
+   Main Content
+===================== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1; /* main content takes remaining space */
+}
+
+h2 {
+    color: rgb(93, 22, 236);
+    border-bottom: 2px solid rgb(93, 22, 236);
+    padding-bottom: 5px;
+}
+
+/* =====================
+   Services List
+===================== */
+.services ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* =====================
+   Deposit Page
+===================== */
+.deposit {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.paypal-button {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.paypal-button:hover {
+    background-color: rgb(93, 22, 236);
+}
+
+/* =====================
+   Gallery Images
+===================== */
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* =====================
+   Reviews
+===================== */
+.reviews p {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-left: 4px solid rgb(93, 22, 236);
+    margin-bottom: 15px;
+}
+
+/* =====================
+   Contact Form
+===================== */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: rgb(63, 63, 63);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button {
+    background-color: rgb(63, 63, 63); /* your purple */
+    color: white; /* text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.cta-button:hover {
+    background-color: rgb(93, 22, 236); /* slightly darker purple on hover */
+}
+
+/* =====================
+   Services Grid
+===================== */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.service-category {
+    flex: 1 1 300px; /* each box is at least 300px, grows if space allows */
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* =====================
+   Before & After Gallery
+===================== */
+.before-after-gallery {
+    padding: 40px 20px;
+}
+
+.before-after-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;          /* ensures mobile responsiveness */
+    justify-content: center;
+}
+
+.before-column, .after-column {
+    flex: 1 1 300px;          /* each column takes min 300px */
+    max-width: 500px;         /* optional, limits width */
+}
+
+.before-column h4, .after-column h4 {
+    text-align: center;
+    color: rgb(93, 22, 236); /* purple accent */
+    margin-bottom: 15px;
+    font-size: larger;
+}
+
+.before-column img, .after-column img {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+
+/* =====================
+   Footer (always at bottom)
+===================== */
+footer {
+    background-color: rgb(63, 63, 63);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; /* pushes footer to bottom */
+}
+
+/* =====================
+   Responsive Adjustments
+===================== */
+@media (max-width: 600px) {
+    .before-after-grid {
+        flex-direction: column;
+    }
+    
+    .before-column, .after-column {
+        max-width: 100%;
+    }
+    
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/* About Us Section */
+.about-image {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+.about-image h2 {
+    color: rgb(93, 22, 236);
+    border-bottom: 2px solid rgb(93, 22, 236);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.about-image-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.about-image-container img.full-image {
+    width: 90%;           /* smaller than full width */
+    max-width: 1000px;    /* prevents image from being too huge */
+    height: auto;
+    display: block;
+    margin: 0 auto;       /* center image horizontally */
+    border-radius: 10px;  /* optional style */
+}
