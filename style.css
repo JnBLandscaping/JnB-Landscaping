@@ -281,3 +281,70 @@ footer {
     margin: 0 auto;       /* center image horizontally */
     border-radius: 10px;  /* optional style */
 }
+
+/* ===================== Responsive Adjustments ===================== */
+@media (max-width: 600px) {
+
+    /* Before & After Grid stays stacked vertically */
+    .before-after-grid {
+        flex-direction: column;
+    }
+    .before-column, .after-column {
+        max-width: 100%;
+    }
+
+    /* Navigation stays horizontal instead of stacking vertically */
+    nav {
+        flex-direction: row;       /* horizontal stacking */
+        justify-content: center;   /* center links horizontally */
+        flex-wrap: wrap;           /* wrap links if needed */
+    }
+    nav a {
+        display: inline-block;     /* inline horizontal links */
+        margin: 5px 10px;          /* spacing between links */
+        text-align: center;
+        width: auto;               /* remove full width */
+        padding: 8px 12px;
+    }
+
+    /* Center forms on About and Contact pages */
+    form {
+        margin: 0 auto;           /* center form horizontally */
+        width: 90%;               /* shrink form to fit screen */
+        max-width: 500px;         /* keep reasonable max width */
+    }
+
+    form input, form textarea {
+        width: 100%;              /* inputs stay full width within form */
+    }
+
+    form input[type="submit"] {
+        display: block;
+        margin: 10px auto;        /* center submit button */
+    }
+
+    /* Hero and general text centering */
+    main {
+        padding: 10px;
+        text-align: center; /* center all text in main */
+    }
+
+    section.hero h1,
+    section.hero p,
+    section h2,
+    section p {
+        text-align: center; /* center headings and paragraphs */
+    }
+
+    /* Iframe forms responsive */
+    iframe {
+        width: 100% !important;  /* fill mobile screen */
+        height: auto;
+        min-height: 600px;
+    }
+
+    .cta-button {
+        display: block;          /* stack buttons */
+        margin: 10px auto;       /* center horizontally */
+    }
+}
