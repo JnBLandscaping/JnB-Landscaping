@@ -356,12 +356,12 @@ nav .hamburger {
 
     nav .nav-links.show {
         display: flex; /* show when hamburger clicked */
-    }
+    
 }
 nav a.active {
     color: white;   /* change text color */
     font-weight: bold; /* optional: make it bold */
 }
-
+}
 
 
