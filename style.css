@@ -281,3 +281,32 @@ footer {
     margin: 0 auto;       /* center image horizontally */
     border-radius: 10px;  /* optional style */
 }
+/* Desktop: keep nav as-is */
+nav {
+    display: flex;
+    justify-content: center; /* centers the links horizontally */
+    gap: 20px; /* space between links */
+    flex-wrap: wrap; /* allows wrapping if the screen is super narrow */
+}
+
+nav a {
+    text-decoration: none;
+    color: #000; /* or whatever your link color is */
+    padding: 8px 12px;
+    display: inline-block; /* keeps links inline */
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* stack links vertically */
+        align-items: center;    /* center them */
+    }
+
+    nav a {
+        padding: 10px 0; /* more spacing for fingers */
+        width: 100%;     /* optional: make links full-width for easier tapping */
+        text-align: center;
+    }
+}
+
