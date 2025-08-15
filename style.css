@@ -358,5 +358,10 @@ nav .hamburger {
         display: flex; /* show when hamburger clicked */
     }
 }
+nav a.active {
+    color: purple;   /* change text color */
+    font-weight: bold; /* optional: make it bold */
+}
+
 
 
