@@ -359,7 +359,7 @@ nav .hamburger {
     }
 }
 nav a.active {
-    color: purple;   /* change text color */
+    color: rgb(93,22,236);   /* change text color */
     font-weight: bold; /* optional: make it bold */
 }
 
