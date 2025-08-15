@@ -348,3 +348,28 @@ footer {
         margin: 10px auto;       /* center horizontally */
     }
 }
+/* =====================
+   Mobile: Gallery before/after side by side without horizontal scroll
+===================== */
+@media (max-width: 600px) {
+    .before-after-grid {
+        display: flex;
+        flex-direction: row;  /* side by side */
+        justify-content: space-between;
+        gap: 10px;            /* small gap between columns */
+        flex-wrap: wrap;       /* allow wrapping if really narrow */
+    }
+
+    .before-column, .after-column {
+        flex: 1 1 48%;        /* each column ~48% of width */
+        max-width: 48%;       /* prevents overflowing */
+        min-width: 0;         /* ensures flex items shrink properly */
+    }
+
+    .before-column img, .after-column img {
+        width: 100%;          /* images fill their column */
+        height: auto;         /* keep aspect ratio */
+        display: block;
+        margin-bottom: 10px;
+    }
+}
