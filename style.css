@@ -1,4 +1,6 @@
-/* ===================== Base Styles ===================== */
+/* =====================
+   Base Styles
+===================== */
 html, body {
     height: 100%; /* ensures footer can stick at bottom */
     margin: 0;
@@ -10,7 +12,9 @@ html, body {
     color: rgb(63, 63, 63);
 }
 
-/* ===================== Header ===================== */
+/* =====================
+   Header
+===================== */
 header {
     text-align: center;
     padding: 10px;
@@ -31,16 +35,18 @@ header {
 }
 
 .hero {
-    display: flex; /* use flexbox */
-    flex-direction: column; /* stack h1 and p vertically */
-    justify-content: center; /* vertical centering inside section */
-    align-items: center; /* horizontal centering */
-    height: 75px; /* adjust height as needed */
+    display: flex;              /* use flexbox */
+    flex-direction: column;     /* stack h1 and p vertically */
+    justify-content: center;    /* vertical centering inside section */
+    align-items: center;        /* horizontal centering */
+    height: 75px;               /* adjust height as needed */
     text-align: center;
     font-size: large;
 }
 
-/* ===================== Navigation ===================== */
+/* =====================
+   Navigation
+===================== */
 nav {
     background-color: rgb(63, 63, 63);
     padding: 10px 0;
@@ -60,7 +66,9 @@ nav a:hover {
     color: rgb(122, 59, 246);
 }
 
-/* ===================== Main Content ===================== */
+/* =====================
+   Main Content
+===================== */
 main {
     max-width: 900px;
     margin: 0 auto;
@@ -74,13 +82,17 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* ===================== Services List ===================== */
+/* =====================
+   Services List
+===================== */
 .services ul {
     list-style-type: disc;
     padding-left: 20px;
 }
 
-/* ===================== Deposit Page ===================== */
+/* =====================
+   Deposit Page
+===================== */
 .deposit {
     text-align: center;
     margin-top: 30px;
@@ -101,7 +113,9 @@ h2 {
     background-color: rgb(93, 22, 236);
 }
 
-/* ===================== Gallery Images ===================== */
+/* =====================
+   Gallery Images
+===================== */
 .gallery img {
     max-width: 100%;
     height: auto;
@@ -109,7 +123,9 @@ h2 {
     border-radius: 5px;
 }
 
-/* ===================== Reviews ===================== */
+/* =====================
+   Reviews
+===================== */
 .reviews p {
     background-color: #f8f8f8;
     padding: 10px;
@@ -117,7 +133,9 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* ===================== Contact Form ===================== */
+/* =====================
+   Contact Form
+===================== */
 form {
     max-width: 500px;
     margin: 0 auto;
@@ -153,7 +171,9 @@ form input[type="submit"] {
     background-color: rgb(93, 22, 236); /* slightly darker purple on hover */
 }
 
-/* ===================== Services Grid ===================== */
+/* =====================
+   Services Grid
+===================== */
 .services-grid {
     display: flex;
     flex-wrap: wrap;
@@ -169,7 +189,9 @@ form input[type="submit"] {
     box-sizing: border-box;
 }
 
-/* ===================== Before & After Gallery ===================== */
+/* =====================
+   Before & After Gallery
+===================== */
 .before-after-gallery {
     padding: 40px 20px;
 }
@@ -177,13 +199,13 @@ form input[type="submit"] {
 .before-after-grid {
     display: flex;
     gap: 30px;
-    flex-wrap: wrap; /* ensures mobile responsiveness */
+    flex-wrap: wrap;          /* ensures mobile responsiveness */
     justify-content: center;
 }
 
 .before-column, .after-column {
-    flex: 1 1 300px; /* each column takes min 300px */
-    max-width: 500px; /* optional, limits width */
+    flex: 1 1 300px;          /* each column takes min 300px */
+    max-width: 500px;         /* optional, limits width */
 }
 
 .before-column h4, .after-column h4 {
@@ -200,7 +222,10 @@ form input[type="submit"] {
     object-fit: cover;
 }
 
-/* ===================== Footer (always at bottom) ===================== */
+
+/* =====================
+   Footer (always at bottom)
+===================== */
 footer {
     background-color: rgb(63, 63, 63);
     color: white;
@@ -209,7 +234,9 @@ footer {
     margin-top: auto; /* pushes footer to bottom */
 }
 
-/* ===================== Responsive Adjustments ===================== */
+/* =====================
+   Responsive Adjustments
+===================== */
 @media (max-width: 600px) {
     .before-after-grid {
         flex-direction: column;
@@ -247,117 +274,10 @@ footer {
 }
 
 .about-image-container img.full-image {
-    width: 90%; /* smaller than full width */
-    max-width: 1000px; /* prevents image from being too huge */
+    width: 90%;           /* smaller than full width */
+    max-width: 1000px;    /* prevents image from being too huge */
     height: auto;
     display: block;
-    margin: 0 auto; /* center image horizontally */
-    border-radius: 10px; /* optional style */
-}
-
-/* Desktop: keep nav as-is */
-nav {
-    display: flex;
-    justify-content: center; /* centers the links horizontally */
-    gap: 20px; /* space between links */
-    flex-wrap: wrap; /* allows wrapping if the screen is super narrow */
-}
-
-nav a {
-    text-decoration: none;
-    color: #000; /* or whatever your link color is */
-    padding: 8px 12px;
-    display: inline-block; /* keeps links inline */
-}
-
-/* Mobile: stack vertically */
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column; /* stack links vertically */
-        align-items: center; /* center them */
-    }
-    nav a {
-        padding: 10px 0; /* more spacing for fingers */
-        width: 100%; /* optional: make links full-width for easier tapping */
-        text-align: center;
-    }
-}
-
-/* Desktop nav */
-nav .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-nav .nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-nav .nav-links a {
-    text-decoration: none;
-    color: #000;
-    padding: 8px 12px;
-}
-
-/* Hamburger hidden on desktop */
-nav .hamburger {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* Mobile styles */
-nav .hamburger {
-    display: block; /* show hamburger */
-}
-
-nav .nav-links {
-    display: none; /* hide links initially */
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    background-color: #f8f8f8; /* or match your site colors */
-}
-
-nav .nav-links a {
-    padding: 15px 0;
-    border-top: 1px solid #ddd;
-}
-
-nav .nav-links.show {
-    display: flex; /* show when hamburger clicked */
-}
-
-nav a.active {
-    color: white; /* change text color */
-    font-weight: bold; /* optional: make it bold */
-}
-
-/* Mobile-specific styles */
-@media (max-width: 600px) {
-    main {
-        padding: 10px;
-        text-align: center; /* center all text in main */
-    }
-
-    section.hero h1,
-    section.hero p,
-    section h2,
-    section p {
-        text-align: center; /* center headings and paragraphs */
-    }
-
-    iframe {
-        width: 100% !important; /* make form fill mobile screen */
-        height: auto; /* adjust height automatically */
-        min-height: 600px; /* keep form tall enough */
-    }
-
-    .cta-button {
-        display: block; /* buttons stack nicely */
-        margin: 10px auto; /* centered horizontally */
-    }
+    margin: 0 auto;       /* center image horizontally */
+    border-radius: 10px;  /* optional style */
 }
