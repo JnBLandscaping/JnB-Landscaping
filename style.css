@@ -336,7 +336,7 @@ nav .hamburger {
 }
 
 /* Mobile styles */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     nav .hamburger {
         display: block; /* show hamburger */
     }
