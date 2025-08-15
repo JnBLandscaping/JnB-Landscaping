@@ -364,4 +364,29 @@ nav a.active {
 }
 }
 
+/* Mobile-specific styles */
+@media (max-width: 600px) {
+    main {
+        padding: 10px;
+        text-align: center; /* center all text in main */
+    }
+
+    section.hero h1,
+    section.hero p,
+    section h2,
+    section p {
+        text-align: center; /* center headings and paragraphs */
+    }
+
+    iframe {
+        width: 100% !important; /* make form fill mobile screen */
+        height: auto; /* adjust height automatically */
+        min-height: 600px; /* keep form tall enough */
+    }
+
+    .cta-button {
+        display: block; /* buttons stack nicely */
+        margin: 10px auto; /* centered horizontally */
+    }
+}
 
