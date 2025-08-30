@@ -112,6 +112,32 @@ h2 {
 .paypal-button:hover {
     background-color: rgb(93, 22, 236);
 }
+  .phone-link {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(93, 22, 236);
+    text-decoration: none;
+}
+
+.phone-link:hover {
+    text-decoration: underline;
+    color: rgb(93, 22, 236);
+}
+.review-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(93, 22, 236);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.review-link:hover {
+    background-color: rgb(93, 22, 236);
+}
+
 
 /* =====================
    Gallery Images
@@ -347,32 +373,7 @@ footer {
         display: block;          /* stack buttons */
         margin: 10px auto;       /* center horizontally */
     }
-      .phone-link {
-    font-size: 18px;
-    font-weight: bold;
-    color: rgb(93, 22, 236);
-    text-decoration: none;
-}
-
-.phone-link:hover {
-    text-decoration: underline;
-    color: rgb(93, 22, 236);
-}
-.review-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: rgb(93, 22, 236);
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-top: 15px;
-}
-
-.review-link:hover {
-    background-color: rgb(93, 22, 236);
-}
-
+    
 }
 /* =====================
    Mobile: Gallery before/after side by side without horizontal scroll
