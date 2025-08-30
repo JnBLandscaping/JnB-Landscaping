@@ -372,4 +372,16 @@ footer {
         display: block;
         margin-bottom: 10px;
     }
+   .phone-link {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(93, 22, 236);
+    text-decoration: none;
+}
+
+.phone-link:hover {
+    text-decoration: underline;
+    color: rgb(93, 22, 236);
+}
+
 }
