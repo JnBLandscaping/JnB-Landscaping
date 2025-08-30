@@ -383,5 +383,18 @@ footer {
     text-decoration: underline;
     color: rgb(93, 22, 236);
 }
-
+.review-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(93, 22, 236);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
 }
+
+.review-link:hover {
+    background-color: rgb(93, 22, 236);
+}
+
