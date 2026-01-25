@@ -1,49 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reviews • JnB Landscaping LLC</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reviews • JnB Landscaping LLC</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <header>
-        <img src="Logo/jnblogo.png" alt="JnB Landscaping Logo" class="logo" />
-    </header>
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <img src="Logo/jnblogo.png" alt="JnB Landscaping Logo" class="logo" />
+    </a>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About Us</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="reviews.html" class="active">Reviews</a>
-        <a href="contact.html">Contact</a>
-        <a href="deposits.html">Deposits</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="reviews.html" class="active">Reviews</a>
+      <a href="contact.html">Contact</a>
+      <a href="deposits.html">Deposits</a>
     </nav>
+  </header>
 
-     <main>
-        <section class="hero">
-            <h1>JnB Landscaping</h1>
-            <p class="tagline">Integrity • Quality • Care</p>
-        </section>
+  <!-- SINGLE WIDE COLUMN -->
+  <main class="wide-content">
+    <section class="hero">
+      <h1>Reviews</h1>
+      <p class="tagline">Integrity • Quality • Care</p>
+    </section>
 
-        <section>
-            <h2>Customer Reviews</h2>
-            <p>" They worked efficiently, paid attention to detail, and left the space looking better than we imagined. Highly recommend them if you’re looking for reliable, hardworking, and reasonably priced landscapers!" – Lexi P.</p>
-            <p>"Best lawn service in town. Always on time and they do an amazing job." – John D.</p>
-            <p>"Friendly crew and great work every time!" – Emily R.</p>
-        </section>
+    <section class="card">
+      <h2 class="card-title">Customer Reviews</h2>
+      <p class="muted">Real feedback from homeowners we’ve served.</p>
 
-        <!-- Google Reviews Section -->
-        <section class="google-reviews">
-            <h2>Leave Us a Review</h2>
-            <p>We’d love to hear your feedback! If you’ve had a great experience with us, please leave us a review on Google.</p>
-            <a href="https://g.page/r/CblBGc8As-VWEAE/review" target="_blank" class="review-link">Leave a Review on Google Here</a>
-        </section>
-    </main>
+      <div class="reviews-grid">
 
-    <footer>
-        <p>© 2025 JnB Landscaping • Kaysville, UT</p>
-    </footer>
+         <div class="review-card">
+          <p class="review-text">  "We had such a great experience with JnB Landscaping! They completely transformed our yard. They made everything look so neat, clean, and beautiful again. They left the space looking better than we imagined. Their pricing was very fair and affordable, which made the whole experience even better. Highly recommend them if you’re looking for reliable, hardworking, and reasonably priced landscapers!”</p>
+          <p class="review-name">— Lexi P</p>
+        </div>
+        
+        <div class="review-card">
+          <p class="review-text">"Jace and Brooks have taken care of my lawn care for 4-5 years. They are both very diligent and precise in their work. They have also done other various yard work that has be extraordinary. I highly recommend their service!”</p>
+          <p class="review-name">— Scott S</p>
+        </div>
+
+        <div class="review-card">
+          <p class="review-text">“My lawn has not looked this good in years. Jace and Brooks are always very helpful and responsive. Hard workers. They do more than lawn care too they’ve helped with my whole yard.”</p>
+          <p class="review-name">— Ben H</p>
+        </div>
+
+        <div class="review-card">
+          <p class="review-text">  "These guys are the very best! They work harder and faster and better than any we’ve had before!”</p>
+          <p class="review-name">— Katy C</p>
+        </div>
+
+        <div class="review-card">
+          <p class="review-text">“These dudes are the best. Did a killer job this summer with our yard. A+”</p>
+          <p class="review-name">— Tanner C</p>
+        </div>
+
+          <div class="review-card">
+          <p class="review-text">  "Awesome company. They are responsible, show up when they say they will. Very polite.
+”</p>
+          <p class="review-name">— Reta M</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">Leave Us a Review</h2>
+      <p class="muted">We’d love to hear your feedback. If we did great work for you, please leave a Google review.</p>
+
+      <section class="cta">
+        <a href="https://g.page/r/CblBGc8As-VWEAE/review" target="_blank" class="cta-button primary">
+          Leave a Review on Google
+        </a>
+        <a href="contact.html" class="cta-button primary">
+          Contact Us
+        </a>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 JnB Landscaping • Kaysville, UT</p>
+  </footer>
 </body>
 </html>
