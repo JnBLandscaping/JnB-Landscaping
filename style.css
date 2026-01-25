@@ -320,7 +320,7 @@ li{
   object-fit: cover;
 }
 
-/* Keep your mobile framing, but don’t fight it elsewhere */
+/* Keep your mobile framing */
 @media (max-width: 700px){
   .owner-photo img{
     height: auto;
@@ -382,22 +382,6 @@ li{
   margin: 0;
   color: var(--muted);
   text-align: left;
-}
-
-/* Center text inside service "bubbles" */
-.service-category{
-  text-align: center;
-}
-
-.service-category ul{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.service-category li{
-  text-align: center;
-  margin: 6px 0;
 }
 
 /* =====================
@@ -693,16 +677,14 @@ li{
 
   .main-content{ order: 1; }
   .right-sidebar{ order: 2; }
-
-  /* Removed the forced height that fought your aspect-ratio rule */
 }
 
-/* MOBILE FIX: stop using fixed header with fake height */
+/* MOBILE FIX: stop using fixed header with fake height + better phone spacing */
 @media (max-width: 700px){
   .site-header{
-    position: sticky;     /* was fixed */
+    position: sticky;
     top: 0;
-    height: auto;         /* was var(--header-h-mobile) */
+    height: auto;
     padding: 12px 14px;
     align-items: stretch;
     flex-direction: column;
@@ -713,12 +695,11 @@ li{
   }
 
   .logo{
-    width: 120px;         /* smaller for phones */
+    width: 120px;
   }
 
-  /* Make nav stable on mobile */
   .site-nav{
-    grid-template-columns: repeat(3, 1fr); /* 6 links => 2 rows */
+    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
   }
 
@@ -728,14 +709,36 @@ li{
     white-space: nowrap;
   }
 
-  .before-after-grid{
-    grid-template-columns: 1fr;
-  }
-
-  /* Header is in normal flow now, so remove the fake offset */
+  /* Header is in normal flow now, so remove the desktop offset */
   .page-grid,
   .wide-content{
-    padding-top: var(--edge-gap); /* was calc(edge-gap + header-h-mobile) */
+    padding-top: var(--edge-gap);
+  }
+
+  /* ===== GALLERY MOBILE FIX =====
+     Keep Before/After side-by-side on phones */
+  .before-after-grid{
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .before-column h3,
+  .after-column h3{
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  /* Slightly tighter image rounding on small screens */
+  .before-column img,
+  .after-column img{
+    border-radius: 10px;
+  }
+}
+
+/* Only stack the gallery on VERY tiny screens */
+@media (max-width: 420px){
+  .before-after-grid{
+    grid-template-columns: 1fr;
   }
 }
 
