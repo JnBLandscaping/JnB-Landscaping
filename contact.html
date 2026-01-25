@@ -1,40 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact • JnB Landscaping LLC</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact • JnB Landscaping LLC</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <header>
-        <img src="Logo/jnblogo.png" alt="JnB Landscaping Logo" class="logo" />
-    </header>
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <img src="Logo/jnblogo.png" alt="JnB Landscaping Logo" class="logo" />
+    </a>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About Us</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="contact.html"class="active">Contact</a>
-        <a href="deposits.html">Deposits</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="deposits.html">Deposits</a>
     </nav>
+  </header>
 
-    <main>
-        <section class="contact-form">
-            <h2>Contact Us</h2>
-             <p><strong>Call us now</strong></p>
-            <a href="tel:+1-801-865-2171" class="phone-link">+1 (801) 865-2171</a>
+  <!-- SINGLE WIDE COLUMN -->
+  <main class="wide-content">
+    <section class="hero">
+      <h1>Contact</h1>
+      <p class="tagline">Integrity • Quality • Care</p>
+    </section>
 
-            <p><strong> Or fill out the form below and we’ll get back to you as soon as possible.</strong></p>
-            
-            <!-- Replace the src URL with your Google Form embed link -->
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdGUMTf4rbls6LfZHYgjtfaPptRL9n50vu22EphiF7n4l-kUw/viewform?embedded=true" width="640" height="689" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </main>
+    <section class="card">
+      <h2 class="card-title">Get a Free Quote</h2>
+      <p class="muted">Call or text us, or fill out the form below and we’ll get back to you as soon as possible.</p>
 
-    <footer>
-        <p>© 2025 JnB Landscaping • Kaysville, UT</p>
-    </footer>
+      <div class="contact-actions">
+        <a href="tel:+18018652171" class="cta-button primary">Call: (801) 865-2171</a>
+        <a href="sms:+18018652171" class="cta-button primary">Text: (801) 865-2171</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">Request Form</h2>
+
+      <div class="form-embed">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdGUMTf4rbls6LfZHYgjtfaPptRL9n50vu22EphiF7n4l-kUw/viewform?embedded=true"
+          loading="lazy"
+          title="JnB Landscaping Contact Form"
+        >
+          Loading…
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 JnB Landscaping • Kaysville, UT</p>
+  </footer>
 </body>
 </html>
