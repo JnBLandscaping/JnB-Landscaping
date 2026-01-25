@@ -21,9 +21,9 @@
 
   --radius: 16px;
 
-  /* ONE source of truth for header height */
+  /* Header vars kept for desktop */
   --header-h: 160px;
-  --header-h-mobile: 120px;
+  --header-h-mobile: 120px; /* no longer hard-enforced on mobile */
 }
 
 *,
@@ -51,7 +51,7 @@ body{
 }
 
 /* =====================
-   Header (FIXED)
+   Header (Desktop fixed)
 ===================== */
 .site-header{
   position: fixed;
@@ -128,11 +128,10 @@ body{
 
 /* =====================
    Layouts
-   IMPORTANT: this is what prevents the hero from being hidden.
+   IMPORTANT: prevents content from being hidden under fixed header (desktop)
 ===================== */
 .page-grid,
 .wide-content{
-  /* top padding = normal page padding + header height */
   padding-top: calc(var(--edge-gap) + var(--header-h));
 }
 
@@ -321,6 +320,7 @@ li{
   object-fit: cover;
 }
 
+/* Keep your mobile framing, but don’t fight it elsewhere */
 @media (max-width: 700px){
   .owner-photo img{
     height: auto;
@@ -625,17 +625,18 @@ li{
 .paypal-powered img{
   height: 0.9rem;
 }
+
 /* Deposits page: pull the first card up to match other pages */
 .deposits-page .wide-content{
-  gap: 12px;              /* was 18px */
+  gap: 12px;
 }
 
 .deposits-page .hero{
-  padding: 18px 18px;     /* was 28px 18px */
+  padding: 18px 18px;
 }
 
 .deposits-page .hero + .card{
-  margin-top: -6px;       /* small lift to align with other pages */
+  margin-top: -6px;
 }
 
 /* =====================
@@ -666,6 +667,18 @@ li{
   }
 }
 
+@media (max-width: 1100px){
+  .site-nav a{
+    padding: 6px 8px;
+    font-size: 13px;
+    border-radius: 7px;
+  }
+
+  .site-nav{
+    gap: 8px;
+  }
+}
+
 @media (max-width: 1000px){
   .page-grid{
     grid-template-columns: 1fr 280px;
@@ -681,37 +694,48 @@ li{
   .main-content{ order: 1; }
   .right-sidebar{ order: 2; }
 
-  .owner-photo img{ height: 320px; }
+  /* Removed the forced height that fought your aspect-ratio rule */
 }
 
+/* MOBILE FIX: stop using fixed header with fake height */
 @media (max-width: 700px){
   .site-header{
-    flex-direction: column;
+    position: sticky;     /* was fixed */
+    top: 0;
+    height: auto;         /* was var(--header-h-mobile) */
+    padding: 12px 14px;
     align-items: stretch;
-    padding: 16px;
-    height: var(--header-h-mobile);
+    flex-direction: column;
   }
 
-  .brand{ justify-content: center; }
-  .logo{ width: 140px; }
+  .brand{
+    justify-content: center;
+  }
 
+  .logo{
+    width: 120px;         /* smaller for phones */
+  }
+
+  /* Make nav stable on mobile */
   .site-nav{
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* 6 links => 2 rows */
+    gap: 8px;
   }
 
   .site-nav a{
-    font-size: 14px;
-    padding: 10px 8px;
+    font-size: 13px;
+    padding: 8px 6px;
+    white-space: nowrap;
   }
 
   .before-after-grid{
     grid-template-columns: 1fr;
   }
 
-  /* Correct top offset on mobile */
+  /* Header is in normal flow now, so remove the fake offset */
   .page-grid,
   .wide-content{
-    padding-top: calc(var(--edge-gap) + var(--header-h-mobile));
+    padding-top: var(--edge-gap); /* was calc(edge-gap + header-h-mobile) */
   }
 }
 
@@ -738,15 +762,3 @@ li{
   .about-image-container{ max-height: 260px; }
   .full-image{ height: 260px; }
 }
-@media (max-width: 1100px){
-  .site-nav a{
-    padding: 6px 8px;
-    font-size: 13px;
-    border-radius: 7px;
-  }
-
-  .site-nav{
-    gap: 8px;
-  }
-}
-
