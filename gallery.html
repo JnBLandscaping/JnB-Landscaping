@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery • JnB Landscaping LLC</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery • JnB Landscaping LLC</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <header>
-        <img src="Logo/jnblogo.png" alt="JnB Landscaping Logo" class="logo" />
-    </header>
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <img src="Logo/jnblogo.png" alt="JnB Landscaping Logo" class="logo" />
+    </a>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About Us</a>
-        <a href="gallery.html" class="active">Gallery</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="contact.html">Contact</a>
-        <a href="deposits.html">Deposits</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+      <a href="deposits.html">Deposits</a>
     </nav>
+  </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>JnB Landscaping</h1>
-            <p class="tagline">Integrity • Quality • Care</p>
-        </section>
+  <!-- SINGLE WIDE COLUMN -->
+  <main class="wide-content">
+    <section class="hero">
+      <h1>Gallery</h1>
+      <p class="tagline">Integrity • Quality • Care</p>
+    </section>
 
-        <!-- Before & After Section -->
-        <section class="before-after-gallery">
-            <h2>Before & After Transformations</h2>
-            <p>Check out how we transform our clients' yards:</p>
-            <div class="before-after-grid">
-                
-                <!-- Before Column -->
-                 <div class="before-column">
-                    <h4>Before</h4>
-                    <img src="Logo/before1.jpeg" alt="Before 1">
-                    <img src="Logo/before2.jpeg" alt="Before 2">
-                    <img src="Logo/before3.jpg" alt="Before 3">
-                    <img src="Logo/before4.jpeg" alt="Before 4">
-                    <img src="Logo/before5.jpeg" alt="Before 5">
-                </div>
+    <section class="card">
+      <h2 class="card-title">Check out how we transform our clients' yards:</h2>
 
-                <!-- After Column -->
-                <div class="after-column">
-                    <h4>After</h4>
-                    <img src="Logo/after1.jpeg" alt="After 1">
-                    <img src="Logo/after2.jpeg" alt="After 2">
-                    <img src="Logo/after3.jpeg" alt="After 3">
-                    <img src="Logo/after4.jpeg" alt="After 4">
-                    <img src="Logo/after5.jpeg" alt="After 5">
-                </div>
+      <div class="gallery-box">
+        <div class="before-after-grid">
+          <div class="before-column">
+            <h3>Before</h3>
+            <img src="Logo/before1.jpeg" alt="Before 1" />
+            <img src="Logo/before2.jpeg" alt="Before 2" />
+            <img src="Logo/before3.jpg" alt="Before 3" />
+            <img src="Logo/before4.jpeg" alt="Before 4" />
+            <img src="Logo/beforestace.jpeg" alt="Before 5" />
+            <img src="Logo/before5.jpeg" alt="Before 6" />
+          </div>
 
-            </div>
-        </section>
-    </main>
+          <div class="after-column">
+            <h3>After</h3>
+            <img src="Logo/after1.jpeg" alt="After 1" />
+            <img src="Logo/after2.jpeg" alt="After 2" />
+            <img src="Logo/after3.jpeg" alt="After 3" />
+            <img src="Logo/after4.jpeg" alt="After 4" />
+            <img src="Logo/afterstace.jpeg" alt="After 5" />
+             <img src="Logo/after5.jpeg" alt="After 6" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <p>© 2025 JnB Landscaping • Kaysville, UT</p>
-    </footer>
+  <footer class="site-footer">
+    <p>© 2026 JnB Landscaping • Kaysville, UT</p>
+  </footer>
 </body>
 </html>
