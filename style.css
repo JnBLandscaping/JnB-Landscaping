@@ -755,156 +755,7 @@ li{
   /* =====================
      HOA Page Add-on
   ===================== */
-  .trust-row{
-    margin-top: 14px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 12px;
-  }
-
-  .trust-pill{
-    background: var(--card-soft);
-    border: 1px solid rgba(93, 22, 236, 0.18);
-    border-radius: 14px;
-    padding: 12px 14px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    text-align: left;
-  }
-
-  .trust-pill strong{
-    display: block;
-    color: #111827;
-    margin-bottom: 4px;
-  }
-
-  .hoa-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 14px;
-    margin-top: 10px;
-  }
-
-  .hoa-feature{
-    background: var(--card-soft);
-    border: 1px solid rgba(0,0,0,0.06);
-    border-radius: 14px;
-    padding: 14px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-
-  .hoa-feature h3{
-    margin-bottom: 6px;
-  }
-
-  .programs{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 14px;
-    margin-top: 14px;
-  }
-
-  .program-card{
-    background: var(--card-soft);
-    border: 1px solid rgba(0,0,0,0.06);
-    border-radius: 14px;
-    padding: 16px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  }
-
-  .program-card h3{
-    text-align: left;
-    margin-bottom: 8px;
-  }
-
-  .program-card ul{
-    margin-top: 8px;
-  }
-
-  .steps{
-    display: grid;
-    gap: 12px;
-    margin-top: 10px;
-  }
-
-  .step{
-    display: grid;
-    grid-template-columns: 44px 1fr;
-    gap: 12px;
-    align-items: start;
-    background: var(--card-soft);
-    border: 1px solid rgba(0,0,0,0.06);
-    border-radius: 14px;
-    padding: 14px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-
-  .step-num{
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    display: grid;
-    place-items: center;
-    font-weight: 900;
-    color: #fff;
-    background: var(--brand-2);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.10);
-  }
-
-  .step-body h3{
-    margin: 0 0 6px 0;
-  }
-
-  .note-box{
-    margin-top: 14px;
-    padding: 14px;
-    border-radius: 14px;
-    border: 1px solid rgba(93, 22, 236, 0.22);
-    background: linear-gradient(180deg, #ffffff 0%, rgba(93, 22, 236, 0.08) 100%);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    display: grid;
-    gap: 6px;
-  }
-
-  .checklist{
-    margin-top: 12px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 10px;
-  }
-
-  .check-item{
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 12px 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-    position: relative;
-    padding-left: 38px;
-  }
-
-  .check-item::before{
-    content: "✓";
-    position: absolute;
-    left: 14px;
-    top: 10px;
-    font-weight: 900;
-    color: var(--brand-2);
-  }
-
-  .faq{
-    display: grid;
-    gap: 12px;
-    margin-top: 10px;
-  }
-
-  .faq-item{
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 14px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-  }
-
+  
   @media (max-width: 700px){
     .step{
       grid-template-columns: 40px 1fr;
@@ -1083,4 +934,302 @@ li{
 
 .hoa-page .check-item::before{
   display: none;
+}
+.trust-row{
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+  }
+
+  .trust-pill{
+    background: var(--card-soft);
+    border: 1px solid rgba(93, 22, 236, 0.18);
+    border-radius: 14px;
+    padding: 12px 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: left;
+  }
+
+  .trust-pill strong{
+    display: block;
+    color: #111827;
+    margin-bottom: 4px;
+  }
+
+  .hoa-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 10px;
+  }
+
+  .hoa-feature{
+    background: var(--card-soft);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .hoa-feature h3{
+    margin-bottom: 6px;
+  }
+
+  .programs{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  .program-card{
+    background: var(--card-soft);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+
+  .program-card h3{
+    text-align: left;
+    margin-bottom: 8px;
+  }
+
+  .program-card ul{
+    margin-top: 8px;
+  }
+
+  .steps{
+    display: grid;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .step{
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    align-items: start;
+    background: var(--card-soft);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .step-num{
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+    color: #fff;
+    background: var(--brand-2);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+  }
+
+  .step-body h3{
+    margin: 0 0 6px 0;
+  }
+
+  .note-box{
+    margin-top: 14px;
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(93, 22, 236, 0.22);
+    background: linear-gradient(180deg, #ffffff 0%, rgba(93, 22, 236, 0.08) 100%);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    display: grid;
+    gap: 6px;
+  }
+
+  .checklist{
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
+  }
+
+  .check-item{
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    position: relative;
+    padding-left: 38px;
+  }
+
+  .check-item::before{
+    content: "✓";
+    position: absolute;
+    left: 14px;
+    top: 10px;
+    font-weight: 900;
+    color: var(--brand-2);
+  }
+
+  .faq{
+    display: grid;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .faq-item{
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  }
+/* =====================
+   HOA PAGE (ALL SCREEN SIZES)
+===================== */
+
+.hoa-page{ text-align: center; }
+
+.hoa-page .hero,
+.hoa-page .card,
+.hoa-page .review-card,
+.hoa-page .hoa-feature,
+.hoa-page .program-card,
+.hoa-page .faq-item,
+.hoa-page .note-box{
+  text-align: center;
+}
+
+/* Lists centered */
+.hoa-page ul{
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+.hoa-page li{ text-align: center; }
+
+/* Trust row */
+.hoa-page .trust-row{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.hoa-page .trust-pill{
+  background: var(--card-soft);
+  border: 1px solid rgba(93, 22, 236, 0.18);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+.hoa-page .trust-pill strong{
+  display: block;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+/* Feature grid */
+.hoa-page .hoa-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 10px;
+}
+.hoa-page .hoa-feature{
+  background: var(--card-soft);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Programs */
+.hoa-page .programs{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+.hoa-page .program-card{
+  background: var(--card-soft);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.hoa-page .program-card h3{ text-align: center; }
+
+/* Steps (centered, stacked) */
+.hoa-page .steps{
+  display: grid;
+  gap: 12px;
+  margin-top: 10px;
+  justify-items: center;
+}
+.hoa-page .step{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+  background: var(--card-soft);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.hoa-page .step-num{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  color: #fff;
+  background: var(--brand-2);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+  margin: 0 0 10px 0;
+}
+
+/* Note box */
+.hoa-page .note-box{
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(93, 22, 236, 0.22);
+  background: linear-gradient(180deg, #ffffff 0%, rgba(93, 22, 236, 0.08) 100%);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  display: grid;
+  gap: 6px;
+}
+
+/* Checklist centered */
+.hoa-page .checklist{
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+}
+.hoa-page .check-item{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  text-align: center;
+}
+
+/* FAQ */
+.hoa-page .faq{
+  display: grid;
+  gap: 12px;
+  margin-top: 10px;
+}
+.hoa-page .faq-item{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
 }
