@@ -21,7 +21,7 @@
 
   --radius: 16px;
 
-  /* ONE source of truth for header height */
+  /* Keep these for consistency in sizing */
   --header-h: 160px;
   --header-h-mobile: 120px;
 }
@@ -51,10 +51,12 @@ body{
 }
 
 /* =====================
-   Header (FIXED)
+   Header (STICKY instead of FIXED)
+   This removes the “content hidden under header” problem
+   without fragile padding-top hacks.
 ===================== */
 .site-header{
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -65,7 +67,6 @@ body{
   justify-content: space-between;
   gap: 20px;
 
-  height: var(--header-h);
   padding: 18px 28px;
 
   background: var(--brand);
@@ -87,6 +88,7 @@ body{
   filter: drop-shadow(0 6px 14px rgba(0,0,0,0.25));
 }
 
+/* Default nav layout (desktop-ish) */
 .site-nav{
   flex: 1 1 auto;
   display: grid;
@@ -129,22 +131,14 @@ body{
 
 /* =====================
    Layouts
-   IMPORTANT: this is what prevents the hero from being hidden.
 ===================== */
-.page-grid,
-.wide-content{
-  /* top padding = normal page padding + header height */
-  padding-top: calc(var(--edge-gap) + var(--header-h));
-}
-
 .page-grid{
   width: min(1400px, 100%);
   margin: 0 auto;
-  padding-left: var(--edge-gap);
-  padding-right: var(--edge-gap);
-  padding-bottom: var(--edge-gap);
 
+  padding: var(--edge-gap);
   gap: var(--column-gap);
+
   display: grid;
   grid-template-columns: minmax(760px, 1fr) 320px;
   align-items: start;
@@ -168,9 +162,7 @@ body{
   width: 100%;
   margin: 0 auto;
 
-  padding-left: var(--edge-gap);
-  padding-right: var(--edge-gap);
-  padding-bottom: var(--edge-gap);
+  padding: var(--edge-gap);
 
   display: flex;
   flex-direction: column;
@@ -320,14 +312,6 @@ li{
   height: auto;
   display: block;
   object-fit: cover;
-}
-
-@media (max-width: 700px){
-  .owner-photo img{
-    height: auto;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-  }
 }
 
 /* =====================
@@ -577,12 +561,6 @@ li{
   display: block;
 }
 
-@media (max-width: 700px){
-  .form-embed iframe{
-    height: 900px;
-  }
-}
-
 /* =====================
    Deposits Page
 ===================== */
@@ -627,17 +605,16 @@ li{
   height: 0.9rem;
 }
 
-/* Deposits page: pull the first card up to match other pages */
 .deposits-page .wide-content{
-  gap: 12px; /* was 18px */
+  gap: 12px;
 }
 
 .deposits-page .hero{
-  padding: 18px 18px; /* was 28px 18px */
+  padding: 18px 18px;
 }
 
 .deposits-page .hero + .card{
-  margin-top: -6px; /* small lift to align with other pages */
+  margin-top: -6px;
 }
 
 /* =====================
@@ -691,7 +668,6 @@ li{
     flex-direction: column;
     align-items: stretch;
     padding: 16px;
-    height: var(--header-h-mobile);
   }
 
   .brand{ justify-content: center; }
@@ -710,10 +686,44 @@ li{
     grid-template-columns: 1fr;
   }
 
-  /* Correct top offset on mobile */
-  .page-grid,
-  .wide-content{
-    padding-top: calc(var(--edge-gap) + var(--header-h-mobile));
+  .form-embed iframe{
+    height: 900px;
+  }
+
+  .owner-photo img{
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .about-image-container{ max-height: 260px; }
+  .full-image{ height: 260px; }
+}
+
+@media (max-width: 1100px){
+  .site-nav a{
+    padding: 6px 8px;
+    font-size: 13px;
+    border-radius: 7px;
+  }
+
+  .site-nav{
+    gap: 8px;
+  }
+}
+
+/* ===== Desktop nav that stays bubbly on wide screens ===== */
+@media (min-width: 701px){
+  .site-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .site-nav a{
+    flex: 0 0 auto;
+    min-width: 140px;
   }
 }
 
@@ -736,358 +746,9 @@ li{
   display: block;
 }
 
-@media (max-width: 700px){
-  .about-image-container{ max-height: 260px; }
-  .full-image{ height: 260px; }
-}
-
-@media (max-width: 1100px){
-  .site-nav a{
-    padding: 6px 8px;
-    font-size: 13px;
-    border-radius: 7px;
-  }
-
-  .site-nav{
-    gap: 8px;
-  }
-
-  /* =====================
-     HOA Page Add-on
-  ===================== */
-  
-  @media (max-width: 700px){
-    .step{
-      grid-template-columns: 40px 1fr;
-    }
-    .step-num{
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
-    }
-  }
-
-  /* =========================
-     HOA PAGE: FORCE CENTERING
-     Put at VERY BOTTOM of style.css
-  ========================= */
-  .hoa-page .hero,
-  .hoa-page .card,
-  .hoa-page .review-card,
-  .hoa-page .hoa-feature,
-  .hoa-page .program-card,
-  .hoa-page .faq-item,
-  .hoa-page .step-body,
-  .hoa-page .note-box{
-    text-align: center !important;
-  }
-
-  .hoa-page h1,
-  .hoa-page h2,
-  .hoa-page h3,
-  .hoa-page p,
-  .hoa-page strong,
-  .hoa-page span{
-    text-align: center !important;
-  }
-
-  .hoa-page ul{
-    list-style: none !important;
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-  }
-
-  .hoa-page li{
-    text-align: center !important;
-  }
-
-  .hoa-page .step{
-    grid-template-columns: 1fr !important;
-    justify-items: center !important;
-    text-align: center !important;
-  }
-
-  .hoa-page .step-num{
-    margin: 0 0 10px 0 !important;
-  }
-
-  .hoa-page .check-item{
-    padding-left: 12px !important;
-    text-align: center !important;
-  }
-
-  .hoa-page .check-item::before{
-    display: none !important;
-  }
-}
-
-/* ===== Desktop nav that stays bubbly on wide screens ===== */
-@media (min-width: 701px){
-  .site-nav{
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: flex-end !important;
-    gap: 10px !important;
-  }
-
-  .site-nav a{
-    flex: 0 0 auto !important; /* prevent stretching */
-    min-width: 140px !important; /* keeps “bubble” width consistent */
-  }
-}
-
-@media (min-width: 701px){
-  .site-header{
-    height: auto !important;
-    padding-bottom: 18px !important;
-  }
-
-  .page-grid,
-  .wide-content{
-    padding-top: calc(var(--edge-gap) + 190px) !important;
-  }
-}
-/* HOA steps: force purple number bubbles on ALL screen sizes */
-.hoa-page .step-num{
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  font-weight: 900;
-  color: #fff;
-  background: var(--brand-2);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.10);
-}
-/* =========================
-   HOA PAGE: CENTER EVERYTHING + PURPLE STEP BUBBLES
-   Put at VERY BOTTOM of style.css
-========================= */
-
-/* Center all text blocks on HOA page */
-.hoa-page{
-  text-align: center;
-}
-
-.hoa-page .hero,
-.hoa-page .card,
-.hoa-page .review-card,
-.hoa-page .hoa-feature,
-.hoa-page .program-card,
-.hoa-page .faq-item,
-.hoa-page .note-box{
-  text-align: center;
-}
-
-/* Center headings/paragraphs explicitly */
-.hoa-page h1,
-.hoa-page h2,
-.hoa-page h3,
-.hoa-page p,
-.hoa-page strong,
-.hoa-page span{
-  text-align: center;
-}
-
-/* Center lists (program cards) */
-.hoa-page ul{
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
-}
-
-.hoa-page li{
-  text-align: center;
-}
-
-/* Steps: stack vertically + center */
-.hoa-page .steps{
-  justify-items: center;
-}
-
-.hoa-page .step{
-  display: grid;
-  grid-template-columns: 1fr;   /* number on top */
-  justify-items: center;
-  text-align: center;
-}
-
-/* Purple number bubble (always) */
-.hoa-page .step-num{
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  font-weight: 900;
-  color: #fff;
-  background: var(--brand-2);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.10);
-  margin: 0 0 10px 0;
-}
-
-/* Checklist: center and remove left check offset */
-.hoa-page .check-item{
-  padding-left: 12px;
-  text-align: center;
-}
-
-.hoa-page .check-item::before{
-  display: none;
-}
-.trust-row{
-    margin-top: 14px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 12px;
-  }
-
-  .trust-pill{
-    background: var(--card-soft);
-    border: 1px solid rgba(93, 22, 236, 0.18);
-    border-radius: 14px;
-    padding: 12px 14px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    text-align: left;
-  }
-
-  .trust-pill strong{
-    display: block;
-    color: #111827;
-    margin-bottom: 4px;
-  }
-
-  .hoa-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 14px;
-    margin-top: 10px;
-  }
-
-  .hoa-feature{
-    background: var(--card-soft);
-    border: 1px solid rgba(0,0,0,0.06);
-    border-radius: 14px;
-    padding: 14px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-
-  .hoa-feature h3{
-    margin-bottom: 6px;
-  }
-
-  .programs{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 14px;
-    margin-top: 14px;
-  }
-
-  .program-card{
-    background: var(--card-soft);
-    border: 1px solid rgba(0,0,0,0.06);
-    border-radius: 14px;
-    padding: 16px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  }
-
-  .program-card h3{
-    text-align: left;
-    margin-bottom: 8px;
-  }
-
-  .program-card ul{
-    margin-top: 8px;
-  }
-
-  .steps{
-    display: grid;
-    gap: 12px;
-    margin-top: 10px;
-  }
-
-  .step{
-    display: grid;
-    grid-template-columns: 44px 1fr;
-    gap: 12px;
-    align-items: start;
-    background: var(--card-soft);
-    border: 1px solid rgba(0,0,0,0.06);
-    border-radius: 14px;
-    padding: 14px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-
-  .step-num{
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    display: grid;
-    place-items: center;
-    font-weight: 900;
-    color: #fff;
-    background: var(--brand-2);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.10);
-  }
-
-  .step-body h3{
-    margin: 0 0 6px 0;
-  }
-
-  .note-box{
-    margin-top: 14px;
-    padding: 14px;
-    border-radius: 14px;
-    border: 1px solid rgba(93, 22, 236, 0.22);
-    background: linear-gradient(180deg, #ffffff 0%, rgba(93, 22, 236, 0.08) 100%);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    display: grid;
-    gap: 6px;
-  }
-
-  .checklist{
-    margin-top: 12px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 10px;
-  }
-
-  .check-item{
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 12px 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-    position: relative;
-    padding-left: 38px;
-  }
-
-  .check-item::before{
-    content: "✓";
-    position: absolute;
-    left: 14px;
-    top: 10px;
-    font-weight: 900;
-    color: var(--brand-2);
-  }
-
-  .faq{
-    display: grid;
-    gap: 12px;
-    margin-top: 10px;
-  }
-
-  .faq-item{
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 14px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-  }
 /* =====================
-   HOA PAGE (ALL SCREEN SIZES)
+   HOA PAGE (ALL SCREEN SIZES) - Single clean version
 ===================== */
-
 .hoa-page{ text-align: center; }
 
 .hoa-page .hero,
@@ -1190,6 +851,9 @@ li{
   background: var(--brand-2);
   box-shadow: 0 8px 18px rgba(0,0,0,0.10);
   margin: 0 0 10px 0;
+}
+.hoa-page .step-body h3{
+  margin: 0 0 6px 0;
 }
 
 /* Note box */
