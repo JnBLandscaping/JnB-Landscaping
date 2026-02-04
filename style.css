@@ -909,19 +909,4 @@ li{
     grid-template-columns: 1fr; /* stack only on very small screens */
   }
 }
-.site-footer{
-  background: #000;
-  margin-top: auto;
-  position: relative;
-}
-
-.site-footer::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -200px;   /* covers bounce/extra space */
-  height: 200px;
-  background: #000;
-}
 
